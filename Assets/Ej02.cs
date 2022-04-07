@@ -19,7 +19,17 @@ public class Ej02 : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        int totalPrecio = precio1 + precio2 + precio3;
+        if (totalPrecio > dineroDisponible)
+        {
+            Debug.Log("El total supera el dinero disponible");
+            Debug.Log("Te falta " + (totalPrecio - dineroDisponible));
+        }
+        else
+        {
+            Debug.Log("El total NO supera el dinero disponible");
+            Debug.Log("Te sobra " + (dineroDisponible - totalPrecio));
+        }
     }
 
     // Update is called once per frame
